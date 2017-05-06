@@ -26,3 +26,12 @@ add_library(DerelictGL3 STATIC
     source/derelict/opengl3/wglext.d)
 target_link_libraries(DerelictGL3
     Derelict::util)
+
+install(
+    TARGETS             DerelictGL3
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
+install(
+    DIRECTORY   source/
+    DESTINATION include/d)
